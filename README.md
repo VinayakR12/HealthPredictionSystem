@@ -1,3 +1,8 @@
+<!-- Define Variables -->
+[Live Project]: https://healthpredictionsystem.onrender.com
+[Model Repository]: https://github.com/VinayakR12/DiseasePrediction_ML_Models
+[My Repository]: https://github.com/VinayakR12/HealthPredictionSystem
+
 <div align="center">
 
 # 🏥 AI-Powered Health Prediction System  
@@ -10,9 +15,9 @@
 ## 🏥 **Your Health, Your Future**  
 
 In today’s fast-paced world, **early diagnosis and prevention** are the keys to a **healthier life**. Our AI-powered system empowers users by predicting health risks associated with **heart disease, diabetes, and Parkinson’s disease**. By analyzing key health indicators, this system provides **instant, data-driven insights** to help you take proactive steps toward better well-being.  
-
-📌 **Live Project:** [https://healthpredictionsystem.onrender.com](#)  
-📂 **Machine Learning Model Repository:** [https://github.com/VinayakR12/DiseasePrediction_ML_Models](#)  
+  
+📌 **Try the Live Application:** [Click Here][Live Project]  
+📂 **Explore Machine Learning Model Repository:** [Visit Repository][Model Repository]  
 
 ---
 
@@ -48,37 +53,37 @@ A progressive nervous system disorder affecting movement and speech. **Early det
 ### 🏠 **Home Page**  
 A clean and modern interface designed for seamless navigation.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(216).png" width="600px">  
+<img src="ScreenShots/Screenshot (216).png" width="600px">  
 </div>  
 
 ### ❤️ **Heart Disease Prediction Form**  
 Enter relevant health data to assess heart disease risk.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(220).png" width="600px">  
+<img src="ScreenShots/Screenshot (220).png" width="600px">  
 </div>  
 
 ### 🍬 **Diabetes Prediction Form**  
 Check for potential diabetes risk with an easy-to-use input form.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(217).png" width="600px">  
+<img src="ScreenShots/Screenshot (217).png" width="600px">  
 </div>  
 
 ### 🧠 **Parkinson’s Disease Prediction Form**  
 A structured input system to evaluate Parkinson’s disease risk.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(223).png" width="600px">
+<img src="ScreenShots/Screenshot (223).png" width="600px">
 </div>  
 
 ### ❌ **Prediction Result – High Risk**  
 A detailed warning and suggested actions for high-risk cases.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(218).png" width="600px">
+<img src="ScreenShots/Screenshot (218).png" width="600px">
 </div>  
 
 ### ✅ **Prediction Result – Low Risk**  
 A reassuring message with preventive tips for a healthier future.  
 <div align="center">  
-<img src="ScreenShots/Screenshot(219).png" width="600px">
+<img src="ScreenShots/Screenshot (219).png" width="600px">
 </div>  
 
 ---
@@ -92,8 +97,10 @@ A reassuring message with preventive tips for a healthier future.
 ### 🤝 Contribution & Support
 
 👨‍💻 Contributions are welcome! If you find any issues, feel free to open an issue or submit a pull request.💡 Suggestions for improvements? Reach out via email or GitHub discussions.
+
 📧 **Contact : rhatankarvianyak@gmail.com**
-💻 **GitHub** [https://github.com/VinayakR12/HealthPredictionSystem](#)  
+
+💻 **GitHub :** [Click Here][My Repository]   
 
 ## 🚀 **Let’s build a smarter, healthier future with AI!**
 
