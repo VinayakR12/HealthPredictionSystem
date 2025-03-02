@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Health Prediction System{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Your Health, Our Priority <i class="fas fa-stethoscope" id="t1"></i></h2>
+    <p>Take charge of your well-being with our AI-powered health prediction system.</p>
+    <a href="#services" class="btn">Start Prediction <i class="fas fa-arrow-right"></i></a>
+</section>
+<section id="disease-info">
+    <h2 class="section-title">Understand Your Health <i class="fas fa-notes-medical"></i></h2>
+    <p class="section-desc">Learn about common health conditions and how to prevent them.</p>
+    <div class="card-container">
+        <div class="info-card diabetes">
+            <i class="fas fa-syringe card-icon"></i>
+            <h3 class="title1">Diabetes</h3>
+            <ul>
+                <li><strong>Cause:</strong>High blood sugar due to insulin resistance.</li>
+                <li><strong>Symptoms:</strong> Frequent urination, excessive thirst, slow healing wounds.</li>
+                <li><strong>Risk Factors:</strong> Poor diet, sedentary lifestyle, obesity.</li>
+                <li><strong>Prevention:</strong> Balanced meals, exercise, maintaining a healthy weight.</li>
+            </ul>
+        </div>
+        <div class="info-card heart-disease">
+            <i class="fas fa-heartbeat card-icon"></i>
+            <h3 class="title1">Heart Disease</h3>
+            <ul>
+                <li><strong>Cause:</strong> Blocked arteries reducing oxygen supply.</li>
+                <li><strong>Symptoms:</strong> Chest pain, shortness of breath, dizziness.</li>
+                <li><strong>Risk Factors:</strong> High cholesterol, smoking, stress.</li>
+                <li><strong>Prevention:</strong> Exercise, healthy diet, stress management.</li>
+            </ul>
+        </div>
+        <div class="info-card parkinsons">
+            <i class="fas fa-brain card-icon"></i>
+            <h3 class="title1">Parkinson’s Disease</h3>
+            <ul>
+                <li><strong>Cause:</strong> Nerve cell damage affecting dopamine levels.</li>
+                <li><strong>Symptoms:</strong> Tremors, muscle stiffness, slow movements.</li>
+                <li><strong>Risk Factors:</strong> Aging, genetics, exposure to toxins.</li>
+                <li><strong>Prevention:</strong> Regular exercise, antioxidants, staying mentally active.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <h2 class="section-title">Begin Your Diagnosis <i class="fas fa-microscope"></i></h2>
+    <p class="section-desc">AI-driven health assessment to detect potential risks early.</p>
+    <div class="service-container">
+        <div class="service-card diabetes">
+            <h3>Diabetes Prediction</h3>
+            <p>Check if you are at risk of diabetes with our advanced AI analysis.</p>
+            <a href="/diabetes" class="btn">Check Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card heart-disease">
+            <h3>Heart Disease Prediction</h3>
+            <p>Assess your heart health based on symptoms and medical history.</p>
+            <a href="/heart" class="btn">Check Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card parkinsons">
+            <h3>Parkinson’s Prediction</h3>
+            <p>Identify early warning signs of Parkinson’s disease.</p>
+            <a href="/parkinsons" class="btn">Check Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

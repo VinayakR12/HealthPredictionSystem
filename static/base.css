@@ -1,0 +1,42 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFE1AF;
+    color: #333;
+}
+
+/* Header */
+header {
+background: linear-gradient(135deg, #1b0033, #3a0d50);
+
+    padding: 5px;
+    text-align: center;
+}
+
+.head {
+    color: #FFD700;
+}
+
+.head:hover {
+    color: yellow;
+    text-decoration: italic;
+}
+
+
+footer {
+background: linear-gradient(135deg, #1b0033, #3a0d50);
+
+    text-align: center;
+    padding: 5px;
+    color: white;
+
+}
+.foot {
+       font-weight: bold;
+}
+
+.foot:hover {
+    color:yellow;
+}
+

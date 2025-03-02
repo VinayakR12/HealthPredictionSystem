@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}Diabetes Prediction{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<div class="container">
+    <a href="{{ url_for('home') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+
+    <div class="form-header">
+        <i class="fas fa-stethoscope health-icon"></i>
+        <h1>Diabetes Prediction</h1>
+    </div>
+
+    <form method="POST" id="diabetesForm">
+        <div class="form-grid">
+            <div class="input-group">
+                <label>Gender :</label>
+                <select name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Age :</label>
+                <input type="number" name="Age" required>
+            </div>
+            <div class="input-group">
+    <label>Pregnancies :</label>
+    <input type="number" name="Pregnancies" title="Number of times pregnant" required>
+</div>
+
+<div class="input-group">
+    <label>Glucose Level (mg/dL):</label>
+    <input type="number" name="Glucose" title="Plasma glucose concentration (mg/dL) after 2 hours in an oral glucose tolerance test" required>
+</div>
+
+<div class="input-group">
+    <label>Blood Pressure (mmHg):</label>
+    <input type="number" name="BloodPressure" title="Diastolic blood pressure (mmHg)" required>
+</div>
+
+<div class="input-group">
+    <label>Skin Thickness (mm):</label>
+    <input type="number" name="SkinThickness" title="Triceps skin fold thickness (mm), measures body fat" required>
+</div>
+
+<div class="input-group">
+    <label>Insulin Level (µU/mL):</label>
+    <input type="number" name="Insulin" title="Serum insulin (µU/mL) after 2 hours" required>
+</div>
+
+<div class="input-group">
+    <label>BMI (kg/m²):</label>
+    <input type="number" step="0.1" name="BMI" title="Body Mass Index (weight in kg/height in m²)" required>
+</div>
+
+<div class="input-group">
+    <label>Diabetes Pedigree Function :</label>
+    <input type="number" step="0.01" name="DiabetesPedigreeFunction"
+        title="DPF indicates genetic risk of diabetes based on family history." required>
+</div>
+
+
+
+        </div>
+        <button type="submit" class="btn">Predict</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById('diabetesForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let prediction = "{{ prediction }}";
+        if (prediction) {
+            Swal.fire({
+                title: prediction === "No Diabetes" ? "🟢 Low Risk" : "🔴 High Risk",
+                text: prediction === "No Diabetes"
+                    ? "You have a low risk of diabetes. Maintain a healthy lifestyle!"
+                    : "You have a high risk of diabetes. Please consult a doctor.",
+                background: prediction === "No Diabetes" ? "#90EF90" : "#FFFDE3",
+                icon: prediction === "No Diabetes" ? "success" : "warning",
+                confirmButtonColor: prediction === "No Diabetes" ? "#28a745" : "#dc3545"
+            });
+        }
+        this.reset();
+    });
+</script>
+
+<style>
+    body {
+        background-color: #A2CDCD;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: 20px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        border-top: 5px solid #007bff;
+        position: relative;
+    }
+
+    .form-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .health-icon {
+        font-size: 50px;
+        color: #007bff;
+    }
+
+    .back-btn {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input, select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: 0.3s ease-in-out;
+    }
+
+    input:hover, select:hover {
+        border-color: #007bff;
+    }
+
+    .btn {
+        background: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        background: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+{% endblock %}
